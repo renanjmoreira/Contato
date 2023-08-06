@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ContatoAPI.Application.Handlers
 {
-    public class ObterPessoaHandler : IRequestHandler<ObterPessoaCommand, Pessoa?>
+    public class ObterPessoaHandler : IRequestHandler<ObterPessoaQuery, Pessoa?>
     {
         private readonly ContextoBd _context;
 
@@ -15,7 +15,7 @@ namespace ContatoAPI.Application.Handlers
             _context = context;
         }
 
-        public async Task<Pessoa?> Handle(ObterPessoaCommand request, CancellationToken cancellationToken)
+        public async Task<Pessoa?> Handle(ObterPessoaQuery request, CancellationToken cancellationToken)
         {
             return await _context.Pessoas.FindAsync(request.Id, cancellationToken);
         }

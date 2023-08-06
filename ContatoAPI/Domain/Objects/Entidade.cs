@@ -2,11 +2,6 @@
 {
     public class Entidade
     {
-        public Guid Id { get; private set; }
-
-        public Entidade()
-        {
-            Id = Guid.NewGuid();
-        }
+        public int Id { get; private set; }
     }
 }

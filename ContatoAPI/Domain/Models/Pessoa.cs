@@ -27,7 +27,7 @@ namespace ContatoAPI.Domain.Models
             _contatos.Add(contato);
         }
 
-        public bool RemoverContato(Guid id)
+        public bool RemoverContato(int id)
         {
             var contato = _contatos.Find(x => x.Id == id);
             if (contato == null)

@@ -4,6 +4,6 @@ namespace ContatoAPI.Application.Commands
 {
     public class RemoverPessoaCommand : IRequest
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
     }
 }

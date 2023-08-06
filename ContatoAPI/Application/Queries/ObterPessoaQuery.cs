@@ -3,7 +3,8 @@ using MediatR;
 
 namespace ContatoAPI.Application.Queries
 {
-    public class ObterPessoasCommand : IRequest<ICollection<Pessoa>>
+    public class ObterPessoaQuery : IRequest<Pessoa?>
     {
+        public int Id { get; set; }
     }
 }

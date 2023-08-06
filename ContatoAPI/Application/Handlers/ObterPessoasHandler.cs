@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ContatoAPI.Application.Handlers
 {
-    public class ObterPessoasHandler : IRequestHandler<ObterPessoasCommand, ICollection<Pessoa>>
+    public class ObterPessoasHandler : IRequestHandler<ObterPessoasQuery, ICollection<Pessoa>>
     {
         private readonly ContextoBd _context;
 
@@ -17,7 +17,7 @@ namespace ContatoAPI.Application.Handlers
             _context = context;
         }
 
-        public async Task<ICollection<Pessoa>> Handle(ObterPessoasCommand request, CancellationToken cancellationToken)
+        public async Task<ICollection<Pessoa>> Handle(ObterPessoasQuery request, CancellationToken cancellationToken)
         {
             return await _context.Pessoas.Include(x => x.Contatos).ToListAsync(cancellationToken);
         }

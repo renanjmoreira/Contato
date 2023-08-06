@@ -6,7 +6,7 @@ namespace ContatoAPI.Application.Commands
 {
     public class EditarPessoaCommand : IRequest
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public List<ContatoEditarPessoa> Contatos { get; set; }
     }
