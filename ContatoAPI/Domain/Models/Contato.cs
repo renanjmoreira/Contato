@@ -15,13 +15,4 @@ namespace ContatoAPI.Domain.Models
             Valor = valor;
         }
     }
-
-    public class ContatoValidator : AbstractValidator<Contato>
-    {
-        public ContatoValidator()
-        {
-            RuleFor(contato => contato.TipoContato).NotEmpty().WithMessage("O tipo de contato é obrigatório.");
-            RuleFor(contato => contato.Valor).NotEmpty().WithMessage("O valor do contato é obrigatório.");
-        }
-    }
 }

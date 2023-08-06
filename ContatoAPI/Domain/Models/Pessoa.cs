@@ -33,12 +33,4 @@ namespace ContatoAPI.Domain.Models
             return _contatos.Remove(contato);
         }
     }
-    public class PessoaValidator : AbstractValidator<Pessoa>
-    {
-        public PessoaValidator()
-        {
-            RuleFor(pessoa => pessoa.Nome).NotEmpty().WithMessage("O nome é obrigatório.");
-            RuleForEach(pessoa => pessoa.Contatos).SetValidator(new ContatoValidator());
-        }
-    }
 }
