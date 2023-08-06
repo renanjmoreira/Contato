@@ -16,6 +16,11 @@ namespace ContatoAPI.Domain.Models
             Nome = nome;
         }
 
+        public void AlterarNome(string nome)
+        {
+            Nome = nome;
+        }
+
         public void AdicionarContato(TipoContato tipoContato, string valor)
         {
             var contato = new Contato(tipoContato, valor);
