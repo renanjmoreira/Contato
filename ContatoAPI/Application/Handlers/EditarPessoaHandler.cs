@@ -26,13 +26,10 @@ namespace ContatoAPI.Application.Handlers
                 throw new ValidationException(validationResult.Errors);
             }
 
-            var pessoa = await _context.Pessoas.FindAsync(request.Id, cancellationToken) ?? throw new Exception("Pessoa não encontrada");
+            var pessoa = await _context.Pessoas.Where(x => x.Id == request.Id).Include(x => x.Contatos).FirstAsync(cancellationToken) ?? throw new Exception("Pessoa não encontrada");
             pessoa.AlterarNome(request.Nome);
 
-            foreach(var contato in pessoa.Contatos)
-            {
-                pessoa.RemoverContato(contato.Id);
-            }
+            _context.PessoaContatos.RemoveRange(pessoa.Contatos);
 
             foreach (var contato in request.Contatos)
             {

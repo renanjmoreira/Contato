@@ -1,6 +1,5 @@
 ﻿using ContatoAPI.Domain.Enums;
 using ContatoAPI.Domain.Objects;
-using FluentValidation;
 
 namespace ContatoAPI.Domain.Models
 {

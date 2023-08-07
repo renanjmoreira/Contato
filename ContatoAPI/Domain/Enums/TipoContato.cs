@@ -2,7 +2,7 @@
 {
     public enum TipoContato
     {
-        Telefone,
+        Telefone = 1,
         Email,
         Whatsapp
     }
