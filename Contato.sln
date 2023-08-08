@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContatoAPI", "ContatoAPI\ContatoAPI.csproj", "{71081E83-25AB-46B0-8EE1-03CBFC65B0F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContatoAPI", "ContatoAPI\ContatoAPI.csproj", "{71081E83-25AB-46B0-8EE1-03CBFC65B0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestContatoAPI", "TestContatoAPI\TestContatoAPI.csproj", "{6A43A5D1-D80C-43F6-BE2E-897E4A2CA32B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{55B3BCE7-D67D-4B1E-83A4-B1DD64A61BFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EFB7C248-3D36-4D51-9EBF-381DDA5DF4E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{71081E83-25AB-46B0-8EE1-03CBFC65B0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71081E83-25AB-46B0-8EE1-03CBFC65B0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71081E83-25AB-46B0-8EE1-03CBFC65B0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A43A5D1-D80C-43F6-BE2E-897E4A2CA32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A43A5D1-D80C-43F6-BE2E-897E4A2CA32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A43A5D1-D80C-43F6-BE2E-897E4A2CA32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A43A5D1-D80C-43F6-BE2E-897E4A2CA32B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71081E83-25AB-46B0-8EE1-03CBFC65B0F6} = {55B3BCE7-D67D-4B1E-83A4-B1DD64A61BFE}
+		{6A43A5D1-D80C-43F6-BE2E-897E4A2CA32B} = {EFB7C248-3D36-4D51-9EBF-381DDA5DF4E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58F8D4F1-15B6-4A83-93CF-302F12EB0F06}
